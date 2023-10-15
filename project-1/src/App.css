@@ -1,0 +1,13 @@
+.Block {
+  width: 150px;
+  height: 150px;
+  border: 5px solid black;
+  background-size: cover;
+  display: inline-block;
+}
+.cross {
+  background-image: url(../assets/images/cross.png);
+}
+.dot {
+  background-image: url(../assets/images/dot.png);
+}

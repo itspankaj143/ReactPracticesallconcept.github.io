@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const urls = [
+        //     "https://jsonplaceholder.typicode.com/posts",
+        //     "https://jsonplaceholder.typicode.com/comments",
+        //     "https://jsonplaceholder.typicode.com/photos",
+        // ];
+        // const fetchData = urls.reduce((accu, url) => {
+        //     return accu.then((results) => {
+        //         return fetch(url)
+        //             .then((response) => response.json())
+        //             .then((data) => results.concat(data));
+        //     });
+        // }, Promise.resolve([]));
+        // fetchData.then((results) => console.log(results));
+        const fruits = [
+            { Apple: 4, Orange: 7, Grape: 3 },
+            { Guava: 6, Lemon: 4, Banana: 8 },
+            { Orange: 5, Pineapple: 7, Apple: 7 },
+        ];
+        const countedFruits = {}
+        fruits.forEach((ele) => {
+            // console.log(ele);
+            for (each in ele) {
+                // console.log(each)
+                if (countedFruits[each]) {
+                    // console.log(countedFruits[each])
+                    countedFruits[each] = countedFruits[each] + ele[each]
+
+                } else {
+                    countedFruits[each] = ele[each]
+                }
+            }
+        });
+        console.log(countedFruits)
+    </script>
+
+</body>
+
+</html>
